@@ -1,0 +1,26 @@
+{
+  "name": "secret-diary-pair-programming-javascript-abubakar-ben",
+  "version": "1.0.0",
+  "description": "![The Secret Diary](images/secret_dairy.png)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-futures-academy-se-2404-a/secret-diary-pair-programming-javascript-abubakar-ben.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digital-futures-academy-se-2404-a/secret-diary-pair-programming-javascript-abubakar-ben/issues"
+  },
+  "homepage": "https://github.com/digital-futures-academy-se-2404-a/secret-diary-pair-programming-javascript-abubakar-ben#readme",
+  "devDependencies": {
+    "chalk": "^5.3.0",
+    "jasmine": "^5.1.0"
+  }
+}
