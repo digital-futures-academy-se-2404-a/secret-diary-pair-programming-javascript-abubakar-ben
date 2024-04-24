@@ -6,17 +6,15 @@ describe("Diary Class Tests:", () => {
   beforeEach(() => {
     testEntryId = 1;
     testEntry = jasmine.createSpyObj("testEntry", {}, { id: testEntryId });
-    testLock = jasmine.createSpyObj("testLock", { isLocked: true });
-    testDiary = new Diary(testLock);
+    testDiary = new Diary();
   });
 
   afterEach(() => {
     testDiary = undefined;
     testEntry = undefined;
     testEntryId = undefined;
-    testLock = undefined;
   });
-  describe("Mutating entries", () => {
+  describe("Mutating entries:", () => {
     it("should add an item and check entries array length has increased by 1", () => {
       //ARRANGE
 
@@ -32,7 +30,7 @@ describe("Diary Class Tests:", () => {
       //ACT
       testDiary.addEntry(testEntry);
       //ASSERT
-      expect(testDiary.hasEntry(testEntry)).toBeTrue();
+      expect(testDiary.hasEntry(testEntry.id)).toBeTrue();
     });
 
     it("should not add null values to entries", () => {
@@ -44,8 +42,8 @@ describe("Diary Class Tests:", () => {
     });
   });
 
-  describe("Accessing entries", () => {
-    it("should return an entry that has been added to the diary", () => {
+  describe("Accessing entries:", () => {
+    it("should return an entry that has been added to the diary:", () => {
       //ARRANGE
       //ACT
       testDiary.addEntry(testEntry);
@@ -61,14 +59,5 @@ describe("Diary Class Tests:", () => {
     });
   });
 
-  describe("locking entries", () => {
-    it("should have a lock when lock has been added", () => {
-      //ARRANGE
-
-      //ACT
-
-      //ASSERT
-      expect(new Diary()).throw();
-    });
-  });
+ 
 });

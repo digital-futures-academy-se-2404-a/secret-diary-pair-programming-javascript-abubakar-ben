@@ -1,11 +1,6 @@
 export default class Diary {
   #entries = [];
 
-  constructor(Lock) {
-    if(lock)
-    hasLock = 
-  }
-
   getLength() {
     return this.#entries.length;
   }
@@ -14,8 +9,8 @@ export default class Diary {
     this.#entries.push(entry);
   }
 
-  hasEntry(entry) {
-    return this.#entries.includes(entry);
+  hasEntry(id) {
+    return !!this.#entries.find(entry=>entry.id === id);
   }
 
   getEntry(id) {
